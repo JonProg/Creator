@@ -10,3 +10,7 @@ O que seria isso? <img src="to_readme\duvide_emoji.png" width="16" height="16"><
 
 <hr>
 <h2><img src="to_readme\emoji_rocket.png" width="20" height="20"></img> Application</h2>
+
+<a href="https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#" download>
+  Download
+</a>
