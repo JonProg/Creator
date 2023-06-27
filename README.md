@@ -1,3 +1,12 @@
+<style>
+    main{
+        background-color: #423c50;
+        border-radius: 4px;
+        padding:13px;
+    }
+</style>
+
+<main>
 <h1><img src="to_readme\desktop.png" width="25" height="25"></img> Project Creator</h1>
 <p align="center">
 <img src="to_readme\logo_readme.png" align="center" ></img>
@@ -11,6 +20,26 @@ O que seria isso? <img src="to_readme\duvide_emoji.png" width="16" height="16"><
 <hr>
 <h2><img src="to_readme\emoji_rocket.png" width="20" height="20"></img> Application</h2>
 
+<style>
+    a{
+        width: 30px;
+        height: 30px;
+        background-color: #a562b4;
+        color: #ffff;
+        border-radius: 7px;
+        padding: 5px;
+        text-align: center;
+        border: 3px solid #a562b4
+    }
+
+    a:hover{
+        padding: 7px;
+        color: #ffff;
+        text-decoration: none;
+    }
+
+</style>
 <a href="https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#" download>
   Download
 </a>
+</main>
