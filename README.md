@@ -13,15 +13,8 @@
 <h2><img src="to_readme\config_emoji.png" width="22" height="22" align="center" ></img> Functions</h2>
 
 <hr>
-<<<<<<< HEAD
 <h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Application</h2>
 
 [<img src="to_readme/kindpng_4986476.png" width="150"/>](https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#)  
 </main>
-=======
-<h2><img src="to_readme\emoji_rocket.png" width="20" height="20" align="center"></img> Application</h2>
-<a href="https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#" download>
-  Download
-</a>
-</main>
->>>>>>> 1c4f85588e6212466b902313b6b78afc85f3dba6
+
