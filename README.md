@@ -1,27 +1,3 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-    @import url('https://fonts.cdnfonts.com/css/upheaval');
-    
-    main{
-        background-color: #423c50;
-        border-radius: 4px;
-        padding:13px;
-    }
-
-    img{
-        display: inline;
-        
-    }
-
-    .text_main{
-        font-family: 'Ubuntu';
-    }
-
-    h1,h2{
-        font-family: 'Upheaval TT (BRK)';
-    }
-</style>
-
 <main>
 <h1><img src="to_readme\desktop.png" width="25" height="25" align="center"></img> Project Creator</h1>
 <p align="center">
@@ -38,26 +14,6 @@
 
 <hr>
 <h2><img src="to_readme\emoji_rocket.png" width="20" height="20" align="center"></img> Application</h2>
-
-<style>
-    a{
-        width: 30px;
-        height: 30px;
-        background-color: #a562b4;
-        color: #ffff;
-        border-radius: 7px;
-        padding: 5px;
-        text-align: center;
-        border: 3px solid #a562b4
-    }
-
-    a:hover{
-        padding: 7px;
-        color: #ffff;
-        text-decoration: none;
-    }
-
-</style>
 <a href="https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#" download>
   Download
 </a>
