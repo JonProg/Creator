@@ -15,8 +15,10 @@
 <hr>
 <h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Application</h2>
 
-[![firts-screnn.png](https://i.postimg.cc/qM7wTQL8/firts-screnn.png)](https://postimg.cc/vDpf7rCB)
+[<img src="https://i.postimg.cc/qM7wTQL8/firts-screnn.png"/>](https://postimg.cc/vDpf7rCB)
 
-[<img src="to_readme/kindpng_4986476.png" width="150"/>](https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#)
+[<img src="https://i.postimg.cc/d3mkzM78/wrute-screnn.png" align = "right"/>](https://postimg.cc/JH0zk25n)
+
+[<img src="to_readme/kindpng_4986476.png" width="170"/>](https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#)
 </main>
 
