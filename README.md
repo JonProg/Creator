@@ -3,10 +3,16 @@
 <p align="center">
 <img src="to_readme\logo_readme.png" align="center" ></img>
 </p>
+PT-BR
 <div class='text_main'>
     <img src="to_readme\emoji_programing.png" width="16" height="16" align="center" ><img>
     Fala players, tranquilos ? com o objetivo de aumento de xp criei esse projeto que tenta acelerar o processo de criação de provas com questões em ordem diferente.
     O que seria isso? <img src="to_readme\duvide_emoji.png" width="16" height="16" align="center"><img> imagine que você é um professor(a) de uma escola e precisa passar uma prova para uma turma só que nessa turma é comun os alunos repasarem as respostas uns para os outros, como você resolvaria isso? Alguns poderiam pensar em criar uma prova e  depois copiar as questões para todas as outras provas colocandoas em ordem diferente só que isso demoraria bastante tempo <img src="to_readme\emoji_time.png" width="16" height="16" align="center"><img>, pensando nisso, decidi criar o "Creator", um programa desktop capaz de produzir diferentes provas a partir de uma prova base que deve ser criada no início do aplicativo.
+    
+EN
+
+Speak players, calm? With the aim of increasing XP, I created this project that tries to speed up the process of creating tests with questions in a different order.
+What would that be? Imagine that you are a teacher at a school and you need to give a test to a class, but in this class it is common for students to review the answers to each other, how would you solve this? Some might think about creating a test and then copying the questions to all the other tests, placing them in a different order, but that would take a lot of time. With that in mind, I decided to create "Creator", a desktop program capable of producing different tests from a single base proof that must be created at the beginning of     the application.
 </div>
 
 <hr>
