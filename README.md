@@ -28,6 +28,6 @@ Speak players, calm? With the aim of increasing XP, I created this project that 
 
 [![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
 
-[<img src="to_readme/kindpng_4986476.png" width="170"/>](https://www.mediafire.com/file/ctlyxorjrs1zqfv/creator1.0_setup.exe/file#)
+[<img src="to_readme/kindpng_4986476.png" width="170"/>](https://www.mediafire.com/file/s9wl4nnrzohuxi2/creator1.0_setup.exe/file)
 </main>
 
