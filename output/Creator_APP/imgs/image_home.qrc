@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="newPrefix">
-    <file>creator_home.png</file>
-    <file>logo_home.png</file>
-  </qresource>
-</RCC>
