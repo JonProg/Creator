@@ -22,9 +22,15 @@ Speak players, calm? With the aim of increasing XP, I created this project that 
 
 <hr>
 <h2><img src="to_readme\config_emoji.png" width="22" height="22" align="center" ></img> Functions</h2>
+<br>
+Asista o vídeo a seguir:
+
+#
+[<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="600" height="300"
+/>](https://youtu.be/GzTMQxRmNKg)
 
 <hr>
-<h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Application</h2>
+<h2><img src="to_readme\emoji_rocket.png" width="30" height="22" align="center"></img> Application</h2>
 
 [![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
 
