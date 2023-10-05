@@ -30,7 +30,7 @@ Asista o vídeo a seguir:
 />](https://youtu.be/GzTMQxRmNKg)
 
 <hr>
-<h2><img src="to_readme\emoji_rocket.png" width="30" height="22" align="center"></img> Application</h2>
+<h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Application</h2>
 
 [![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
 
