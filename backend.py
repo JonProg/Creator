@@ -33,10 +33,11 @@ Aluno: _____________________________________________________"""
             questions = dict(quests_choice)
 
         for questao, alternativas in questions.items():
+            pdf.ln(8)
             pdf.set_font(style='')
             quest = f'{count}) {questao}'
-            pdf.ln(8)
             pdf.multi_cell(txt=quest,w=0, h=7, align='l')
+            
 
             if alternativas[0] == None:
                 linha = '__'*37
@@ -47,10 +48,11 @@ Aluno: _____________________________________________________"""
 
             else:
                 for i,alternativa in enumerate(alternativas):
-                    pdf.ln(10)
                     alternative_text= f'    ({label_alternative[i]}) {alternativa}'
+                    pdf.ln(10)
                     pdf.set_font(style='')
                     pdf.cell(txt=alternative_text)
+            pdf.ln(8)
             count+=1
         
         pdf.output(name=f'{path_folder}/prova_creater{key}-{index}.pdf') #Modificar o index por um valor aleatorio
