@@ -26,7 +26,7 @@ Speak players, calm? With the aim of increasing XP, I created this project that 
 Asista o vídeo a seguir:
 
 #
-[<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="600" height="300"
+[<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="400" height="300"
 />](https://youtu.be/GzTMQxRmNKg)
 
 <hr>
