@@ -492,12 +492,12 @@ def activity_screen(qtd_questao: int, screen):
 
     screens = [quests_multi, quests_escritas, quest_mistas]
 
-    tela = windows[screen]
-    create_test = screens[screen]
+    screnn_current = windows[screen]
+    screen_chosen = screens[screen]
 
-    create_test(qtd_questao)
-    tela.voltar_btn.clicked.connect(partial(return_window, tela))
-    tela.avancar.clicked.connect(partial(save_pdf, tela, questions, questoes))
+    screen_chosen(qtd_questao)
+    screnn_current.voltar_btn.clicked.connect(partial(return_window, screnn_current))
+    screnn_current.avancar.clicked.connect(partial(save_pdf, screnn_current, questions, questoes))
 #----------------------------------------------------------------------
 
 #Primeira tela
