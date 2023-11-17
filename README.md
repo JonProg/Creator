@@ -4,6 +4,17 @@
 <img src="to_readme\logo_readme.png" align="center" ></img>
 </p>
 
+#
+
+<h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Application</h2>
+
+[![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
+
+[<img src="to_readme/kindpng_4986476.png" width="170"/>](https://www.mediafire.com/file/s9wl4nnrzohuxi2/creator1.0_setup.exe/file)
+</main>
+
+#
+
 PT-BR
 #
 
@@ -28,12 +39,6 @@ Asista o vídeo a seguir:
 #
 [<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="400" height="300"
 />](https://youtu.be/GzTMQxRmNKg)
-
 <hr>
-<h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Application</h2>
 
-[![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
-
-[<img src="to_readme/kindpng_4986476.png" width="170"/>](https://www.mediafire.com/file/s9wl4nnrzohuxi2/creator1.0_setup.exe/file)
-</main>
 

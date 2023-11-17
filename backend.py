@@ -1,11 +1,9 @@
-from PyQt5 import uic
-from PyQt5.QtWidgets import (QFileDialog,QMessageBox,QApplication)
 from random import shuffle, choices
 import string as s
 from fpdf import FPDF
+from PyQt5.QtWidgets import QApplication
 
 app = QApplication([])
-win_download = uic.loadUi("telas/win_download.ui")
 
 def criar_prova(questions:dict, path_folder, qtd_question:int, randoms=False):
     for index in range(qtd_question):
@@ -60,7 +58,7 @@ Aluno: _____________________________________________________"""
 
 #----------------------------------------------------------------------
 #Função para ordenar os dados de forma correta para o dict {quest}
-def activity(questions:list, questoes:dict):
+def order_data(questions:list, questoes:dict):
     for quest in questions[1:]:
         questoes.update({quest.toPlainText():[]})
 
@@ -74,51 +72,7 @@ def activity(questions:list, questoes:dict):
                 alternativa = alternatives.toPlainText()
                 list_.append(alternativa)
 
-#----------------------------------------------------------------------
-#Função que salva o pdf em uma pasta e chama a função de criar o pdf
 
-def save_pdf(screen, quests:list, questoes:dict):
-    screen.close()
-    activity(quests,questoes)
-    def folder():    
-        msg = QMessageBox()
-        msg.setIcon(QMessageBox.Information)
-        msg.setStyleSheet("QLabel{font-size: 15px;}")
-
-        qtd_provas = 0
-        fname = QFileDialog.getExistingDirectory(
-            win_download, caption='Seleciona um Pasta',
-            )
-        qtd_provas+=win_download.qtd_provas.value()
-
-        try:
-            if win_download.quest_choice.isChecked():
-                criar_prova(questoes, fname, qtd_provas, True)
-            else:
-                criar_prova(questoes, fname, qtd_provas)
-        except:
-            msg.setIcon(QMessageBox.Warning)
-            msg.setText("Erro ao criar arquivo PDF")
-            msg.setWindowTitle("Error")
-            return msg.exec_()
-
-        msg.setText("PDF Criado com Sucesso")
-        msg.setWindowTitle("Sucesso")
-        quests.clear()
-        return msg.exec_()
-
-    def frame_choice():
-        if win_download.quest_choice.isChecked():
-            win_download.frame_provas.show()
-
-        else:
-            win_download.frame_provas.hide()
-            win_download.qtd_provas.setValue(1)
-
-    win_download.frame_provas.hide()
-    win_download.quest_choice.clicked.connect(frame_choice)
-    win_download.avancar.clicked.connect(folder)
-    return win_download.show()
 
 
 

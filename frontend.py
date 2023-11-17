@@ -1,14 +1,16 @@
 from PyQt5 import uic,QtCore,QtGui
 from PyQt5.QtWidgets import (QLabel, QFrame, QPlainTextEdit,
-                            QPushButton,QApplication,QMessageBox)
-from backend import save_pdf, win_download
+                            QPushButton,QApplication,QMessageBox, QFileDialog)
+from backend import order_data, criar_prova
 from functools import partial
+from ui_style import btn_style
 
 questions = [[]]
 questoes = {}
 elements = []
 
 win_escrita = uic.loadUi("telas/win_escrita.ui")
+win_download = uic.loadUi("telas/win_download.ui")
 win_multi = uic.loadUi("telas/win_multi.ui")
 win_mista = uic.loadUi("telas/win_mista.ui")
 win_main = uic.loadUi("telas/win_main.ui")
@@ -31,34 +33,56 @@ def return_window(screen):
     screen.close()
     win_main.show()
 
-win_download.home_btn.clicked.connect(partial(return_window, win_download))
+win_download.home_btn.clicked.connect(partial(return_window,win_download))
+
+#------------------------------------------------------------------------------------
+#Tela para o download do pdf
+
+def pdf_download(screen, quests:list, questoes:dict):
+    screen.close()
+    order_data(quests,questoes)
+    def folder():    
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setStyleSheet("QLabel{font-size: 15px;}")
+
+        qtd_provas = 0
+        fname = QFileDialog.getExistingDirectory(
+            win_download, caption='Seleciona um Pasta',
+            )
+        qtd_provas+=win_download.qtd_provas.value()
+
+        try:
+            if win_download.quest_choice.isChecked():
+                criar_prova(questoes, fname, qtd_provas, True)
+            else:
+                criar_prova(questoes, fname, qtd_provas)
+        except:
+            msg.setIcon(QMessageBox.Warning)
+            msg.setText("Erro ao criar arquivo PDF")
+            msg.setWindowTitle("Error")
+            return msg.exec_()
+
+        msg.setText("PDF Criado com Sucesso")
+        msg.setWindowTitle("Sucesso")
+        quests.clear()
+        return msg.exec_()
+
+    def frame_choice():
+        if win_download.quest_choice.isChecked():
+            win_download.frame_provas.show()
+
+        else:
+            win_download.frame_provas.hide()
+            win_download.qtd_provas.setValue(1)
+
+    win_download.frame_provas.hide()
+    win_download.quest_choice.clicked.connect(frame_choice)
+    win_download.avancar.clicked.connect(folder)
+    return win_download.show()
 
 #----------------------------------------------------------------------
 #Tela de questões escritas
-
-def btn_style(screen, translator, name_btn):
-    btn_font = QtGui.QFont()
-    btn_font.setFamily("Poppins Medium")
-    btn_font.setPointSize(11)
-    screen.avancar.setFont(btn_font)
-    screen.avancar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    screen.avancar.setStyleSheet(
-        "QPushButton{\n"
-        "    border-radius: 7px;\n"
-        "    border-style:solid;\n"
-        "    color: rgb(255, 255, 255);\n"
-        "    border-width:3px;\n"
-        "    border-color: #411E8F;\n"
-        "    background-color: #2A2438;\n"
-        "}\n"
-        "\n"
-        "QPushButton:hover {\n"
-        "    border:10px;\n"
-        "    background-color:#411E8F;\n"
-        "}")
-
-    screen.avancar.setObjectName("avancar")
-    screen.avancar.setText(translator("MainWindow", name_btn))
 
 def quests_escritas(quests:int):
     input_y = 0
@@ -243,7 +267,7 @@ def quest_mistas(quests:int):
     buttons = []
 
     id_btn = 0
-    posion_label = 100
+    position_label = 100
     word_letter = ['A','B','C','D']
 
     def criar_quest(valor, btn):
@@ -265,19 +289,19 @@ def quest_mistas(quests:int):
                 win_mista.avancar.move(140, (last_frame+470))
 
             else:
-                posion_button = 0
+                position_button = 0
                 height_last_frame:int = frames[-1].frameGeometry().height()
 
                 if height_last_frame == 441:
-                    posion_button+=350
+                    position_button+=350
                 
                 elif height_last_frame == 161:
-                    posion_button+=200
+                    position_button+=200
                 
                 else:
-                    posion_button += 120
+                    position_button += 120
 
-                win_mista.avancar.move(140, (last_frame+posion_button))
+                win_mista.avancar.move(140, (last_frame+position_button))
             
             win_mista.frame.setMinimumSize(QtCore.QSize
                 (0, win_mista.avancar.frameGeometry().y()+50)
@@ -351,7 +375,7 @@ def quest_mistas(quests:int):
         font.setPointSize(11)
 
         win_mista.frame_quest = QFrame(win_mista.frame)
-        win_mista.frame_quest.setGeometry(QtCore.QRect(0, posion_label, 381, 81))
+        win_mista.frame_quest.setGeometry(QtCore.QRect(0, position_label, 381, 81))
         win_mista.frame_quest.setFrameShadow(QFrame.Raised)
         win_mista.frame_quest.setFrameShape(QFrame.NoFrame)
         win_mista.frame_quest.setObjectName(f"frame_{quest}")
@@ -361,7 +385,7 @@ def quest_mistas(quests:int):
         frames.append(win_mista.frame_quest)
 
         #-----------------------------------------------------------------------------
-        posion_quest = 80
+        position_quest = 80
         alternatives = []
 
         win_mista.frame_alternative = QFrame(win_mista.frame_quest)
@@ -385,7 +409,7 @@ def quest_mistas(quests:int):
 
             win_mista.label_alternative = QLabel(win_mista.frame_alternative)
             win_mista.label_alternative.setGeometry(
-                QtCore.QRect(40, posion_quest+10, 21, 31)
+                QtCore.QRect(40, position_quest+10, 21, 31)
                 )
             font.setPointSize(14)
             win_mista.label_alternative.setFont(font)
@@ -394,7 +418,7 @@ def quest_mistas(quests:int):
 
             win_mista.quest_alternative = QPlainTextEdit(win_mista.frame_alternative)
             win_mista.quest_alternative.setGeometry(
-                QtCore.QRect(70, posion_quest, 301, 50)
+                QtCore.QRect(70, position_quest, 301, 50)
                 )
             win_mista.quest_alternative.setStyleSheet(
                 "border-radius: 4px;\n"
@@ -405,12 +429,11 @@ def quest_mistas(quests:int):
 
             win_mista.quest_alternative.setObjectName(f'quest_{letter}')
             win_mista.quest_alternative.show()
-            posion_quest += 70
+            position_quest += 70
             alternatives.append(win_mista.quest_alternative)
         
         alternative_questions[0].append(alternatives)
         mc_answers.append(win_mista.frame_alternative)
-
 
         win_mista.quest_label = QLabel(win_mista.frame_quest)
         win_mista.quest_label.setGeometry(QtCore.QRect(10, 10, 101, 16))
@@ -472,14 +495,16 @@ def quest_mistas(quests:int):
         buttons.extend((win_mista.escrita_btn,win_mista.multi_btn))
 
         id_btn+=2
-        posion_label+=120
+        position_label+=120
 
-    win_mista.avancar.move(140, posion_label)
+    win_mista.avancar.move(140, position_label)
     win_mista.frame.setMinimumSize(QtCore.QSize
         (0, win_mista.avancar.frameGeometry().y()+50)
         )
 
     return win_mista.show()
+
+#------------------------------------------------------------------------------------
 
 #----------------------------------------------------------------------
 #Função que ativa as outras telas
@@ -493,11 +518,11 @@ def activity_screen(qtd_questao: int, screen):
     screens = [quests_multi, quests_escritas, quest_mistas]
 
     screnn_current = windows[screen]
-    screen_chosen = screens[screen]
+    screen_choice = screens[screen]
 
-    screen_chosen(qtd_questao)
+    screen_choice(qtd_questao)
     screnn_current.voltar_btn.clicked.connect(partial(return_window, screnn_current))
-    screnn_current.avancar.clicked.connect(partial(save_pdf, screnn_current, questions, questoes))
+    screnn_current.avancar.clicked.connect(partial(pdf_download, screnn_current, questions, questoes))
 #----------------------------------------------------------------------
 
 #Primeira tela
@@ -523,4 +548,4 @@ def home_screen():
 app = QApplication([])
 win_main.btn_avancar.clicked.connect(home_screen)
 win_main.show()
-app.exec()
+app.exec_()
