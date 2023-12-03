@@ -43,11 +43,13 @@ Assista o vídeo a seguir/ Watch this video
 />](https://youtu.be/GzTMQxRmNKg)
 <hr>
 <br>
+
+#
+
 <h3>Requisitos Mínimos/ Minimum requirements</h3>
 
-- CPU:1Ghz
-- RAM:1.5Gb
-- SIZE:~200Mb
+<br>
 
-
-
+> <strong>CPU</strong>: 1Ghz <br>
+ <strong>RAM</strong>: 1.5Gb<br>
+ <strong>SIZE</strong>: ~200Mb
