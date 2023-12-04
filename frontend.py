@@ -48,7 +48,7 @@ def pdf_download(screen, quests:list, questoes:dict):
 
         qtd_provas = 0
         fname = QFileDialog.getExistingDirectory(
-            win_download, caption='Seleciona um Pasta',
+            win_download, caption='Selecione uma Pasta',
             )
         qtd_provas+=win_download.qtd_provas.value()
 
@@ -59,11 +59,11 @@ def pdf_download(screen, quests:list, questoes:dict):
                 criar_prova(questoes, fname, qtd_provas)
         except:
             msg.setIcon(QMessageBox.Warning)
-            msg.setText("Erro ao criar arquivo PDF")
+            msg.setText("Erro ao criar arquivo PDF \n\n(ಥ﹏ಥ)")
             msg.setWindowTitle("Error")
             return msg.exec_()
 
-        msg.setText("PDF Criado com Sucesso")
+        msg.setText("PDF Criado com Sucesso \n\nd–(^ ‿ ^ )z")
         msg.setWindowTitle("Sucesso")
         quests.clear()
         return msg.exec_()
@@ -475,7 +475,7 @@ def home_screen():
             break
     else:
         msg = QMessageBox()
-        msg.setText("Escolha o tipo de questão!")
+        msg.setText("Escolha o tipo de questão!\n\n(ノಠ益ಠ)ノ彡┻━┻")
         msg.setIcon(QMessageBox.Warning)
         msg.setWindowTitle("Error")
         msg.setStyleSheet("QLabel{font-size: 15px;}")
