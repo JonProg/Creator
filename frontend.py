@@ -3,17 +3,17 @@ from PyQt5.QtWidgets import (QLabel, QFrame, QPlainTextEdit,
                             QPushButton,QApplication,QMessageBox, QFileDialog)
 from backend import order_data, criar_prova
 from functools import partial
-from ui_style import btn_style
+from ui_style import btn_style, input_style, mista_style
 
 questions = [[]]
 questoes = {}
 elements = []
 
-win_escrita = uic.loadUi("telas/win_escrita.ui")
-win_download = uic.loadUi("telas/win_download.ui")
-win_multi = uic.loadUi("telas/win_multi.ui")
-win_mista = uic.loadUi("telas/win_mista.ui")
-win_main = uic.loadUi("telas/win_main.ui")
+win_escrita = uic.loadUi("screens/win_escrita.ui")
+win_download = uic.loadUi("screens/win_download.ui")
+win_multi = uic.loadUi("screens/win_multi.ui")
+win_mista = uic.loadUi("screens/win_mista.ui")
+win_main = uic.loadUi("screens/win_main.ui")
 
 windows = [win_multi, win_escrita, win_mista]
 
@@ -115,23 +115,7 @@ def quests_escritas(quests:int):
         questions.append(win_escrita.input_quest)
         questions[0].append(None)
 
-        win_escrita.input_quest.setFont(font)
-        win_escrita.input_quest.viewport().setProperty(
-            "cursor", QtGui.QCursor(QtCore.Qt.IBeamCursor)
-            )
-        win_escrita.input_quest.setMouseTracking(False)
-        win_escrita.input_quest.setFocusPolicy(QtCore.Qt.WheelFocus)
-        win_escrita.input_quest.setStyleSheet(
-            "QPlainTextEdit{\n"
-                "border-radius: 4px;\n"
-                "background-color: rgb(255, 255, 255);\n"
-            "}\n"
-                 "\n"
-                "QPlainTextEdit:focus{\n"
-                    "border: 2px solid #6A1B9A\n"
-                "}")
-
-        win_escrita.input_quest.setFrameShape(QFrame.NoFrame)
+        input_style(win_escrita.input_quest)
         win_escrita.input_quest.setObjectName(f"input_quest{quest}")
         #------------------------------------------------------------
 
@@ -179,25 +163,9 @@ def quests_multi(quests:int):
         win_multi.quest_title.setStyleSheet("color: rgb(255, 255, 255);")
         win_multi.quest_title.setObjectName(f"quest_{quest}")
         #------------------------------------------------------------
-
         win_multi.input_quest = QPlainTextEdit(win_multi.frame_quest)
         win_multi.input_quest.setGeometry(QtCore.QRect(0, 30 + position_quest, 361, 61))
-        win_multi.input_quest.setFont(font)
-        win_multi.input_quest.viewport().setProperty(
-        "cursor", QtGui.QCursor(QtCore.Qt.IBeamCursor)
-        )
-        win_multi.input_quest.setStyleSheet(
-            "QPlainTextEdit{\n"
-                "border-radius: 4px;\n"
-                "background-color: rgb(255, 255, 255);\n"
-            "}\n"
-                 "\n"
-                "QPlainTextEdit:focus{\n"
-                    "border: 2px solid #6A1B9A\n"
-                "}"
-            )
-
-        win_multi.input_quest.setFrameShape(QFrame.NoFrame)
+        input_style(win_multi.input_quest)
         win_multi.input_quest.setObjectName(f"input_quest{quest}")
 
         questions.append(win_multi.input_quest)
@@ -225,16 +193,7 @@ def quests_multi(quests:int):
             win_multi.alternative.setGeometry(QtCore.QRect
             (60, position_alternative, 301, 51))
             
-            font.setPointSize(11)
-            win_multi.alternative.setFont(font)
-            win_multi.alternative.viewport().setProperty(
-            "cursor", QtGui.QCursor(QtCore.Qt.IBeamCursor))
-            
-            win_multi.alternative.setStyleSheet(
-                "border-radius: 4px;\n"
-                "background-color: rgb(255, 255, 255);")
-
-            win_multi.alternative.setFrameShape(QFrame.NoFrame)
+            input_style(win_multi.alternative)
             win_multi.alternative.setObjectName(f"alternative_{quest}")
             
             position_alternative += 80
@@ -397,16 +356,11 @@ def quest_mistas(quests:int):
         win_mista.question = QPlainTextEdit(win_mista.frame_alternative)
         win_mista.question.setGeometry(QtCore.QRect(10, 0, 361, 61))
         win_mista.question.setObjectName(f'question_alternative{quest}')
-        win_mista.question.setStyleSheet(
-            "border-radius: 4px;\n"
-            "background-color: rgb(255, 255, 255);")
-        font.setPointSize(12)
-        win_mista.question.setFont(font)
+        input_style(win_mista.question)
         win_mista.question.show()
         alternative_questions.append(win_mista.question)
         
         for letter in word_letter:
-
             win_mista.label_alternative = QLabel(win_mista.frame_alternative)
             win_mista.label_alternative.setGeometry(
                 QtCore.QRect(40, position_quest+10, 21, 31)
@@ -420,13 +374,7 @@ def quest_mistas(quests:int):
             win_mista.quest_alternative.setGeometry(
                 QtCore.QRect(70, position_quest, 301, 50)
                 )
-            win_mista.quest_alternative.setStyleSheet(
-                "border-radius: 4px;\n"
-                "background-color: rgb(255, 255, 255);")
-
-            font.setPointSize(11)
-            win_mista.quest_alternative.setFont(font)
-
+            input_style(win_mista.quest_alternative)
             win_mista.quest_alternative.setObjectName(f'quest_{letter}')
             win_mista.quest_alternative.show()
             position_quest += 70
@@ -457,15 +405,7 @@ def quest_mistas(quests:int):
         win_mista.escrita_btn.setObjectName(f"escrita_btn{quest}")
 
         for button in [win_mista.escrita_btn, win_mista.multi_btn]:
-            font.setPointSize(11)
-            button.setFont(font)
-            button.setStyleSheet(
-                    "border-radius: 5px;\n"
-                    "border-style:solid;\n"
-                    "color: rgb(255, 255, 255);\n"
-                    "border-width:3px;\n"
-                    "border-color: #411E8F;\n"
-                    "background-color: #2A2438;")
+            mista_style(button)
 
         #---------------------------------------------------------------------------
 
@@ -483,12 +423,8 @@ def quest_mistas(quests:int):
         win_mista.quest = QPlainTextEdit(win_mista.frame_quest)
         win_mista.quest.setGeometry(QtCore.QRect(10, 100, 361, 61))
         win_mista.quest.setObjectName(f'quest_{quest}')
-        win_mista.quest.setStyleSheet(
-            "border-radius: 4px;\n"
-            "background-color: rgb(255, 255, 255);")
+        input_style(win_mista.quest)
         win_mista.quest.hide()
-        font.setPointSize(12)
-        win_mista.quest.setFont(font)
         written_answers.append(win_mista.quest)
 
         #------------------------------------------------------------------------------
@@ -498,6 +434,7 @@ def quest_mistas(quests:int):
         position_label+=120
 
     win_mista.avancar.move(140, position_label)
+    btn_style(win_mista,_translate,'Avançar')
     win_mista.frame.setMinimumSize(QtCore.QSize
         (0, win_mista.avancar.frameGeometry().y()+50)
         )
