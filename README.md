@@ -34,7 +34,7 @@ Speak players, calm? With the aim of increasing XP, I created this project that 
 <hr>
 <h2><img src="to_readme\config_emoji.png" width="22" height="22" align="center" ></img> Functions</h2>
 <br>
-Asista o vídeo a seguir:
+Assista o vídeo a seguir:
 
 #
 [<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="400" height="300"
