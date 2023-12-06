@@ -6,7 +6,9 @@
 
 #
 
-<h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Application</h2>
+<h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Aplicação/Application</h2>
+
+#
 
 [![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
 
@@ -32,13 +34,20 @@ Speak players, calm? With the aim of increasing XP, I created this project that 
 
 
 <hr>
-<h2><img src="to_readme\config_emoji.png" width="22" height="22" align="center" ></img> Functions</h2>
+<h2><img src="to_readme\config_emoji.png" width="22" height="22" align="center" ></img> Funções/Functions</h2>
 <br>
-Assista o vídeo a seguir:
+Assista o vídeo a seguir/ Watch this video 
 
 #
 [<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="400" height="300"
 />](https://youtu.be/GzTMQxRmNKg)
 <hr>
+<br>
+<h3>Requisitos Mínimos/ Minimum requirements</h3>
+
+- CPU:1Ghz
+- RAM:1.5Gb
+- SIZE:~200Mb
+
 
 
