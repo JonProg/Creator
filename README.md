@@ -41,8 +41,6 @@ Assista o vídeo a seguir/ Watch this video
 #
 [<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="400" height="300"
 />](https://youtu.be/GzTMQxRmNKg)
-<hr>
-<br>
 
 #
 
