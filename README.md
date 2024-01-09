@@ -4,11 +4,9 @@
 <img src="to_readme\logo_readme.png" align="center" ></img>
 </p>
 
-#
+
 
 <h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Aplicação/Application</h2>
-
-#
 
 [![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
 
@@ -41,8 +39,6 @@ Assista o vídeo a seguir/ Watch this video
 #
 [<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="400" height="300"
 />](https://youtu.be/GzTMQxRmNKg)
-<hr>
-<br>
 
 #
 
