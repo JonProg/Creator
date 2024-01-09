@@ -46,6 +46,6 @@ Assista o vídeo a seguir/ Watch this video
 
 <br>
 
-> <strong>CPU</strong>: 1Ghz <br>
+<strong>CPU</strong>: 1Ghz <br>
  <strong>RAM</strong>: 1.5Gb<br>
  <strong>SIZE</strong>: ~200Mb
