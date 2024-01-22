@@ -33,18 +33,16 @@ Speak players, calm? With the aim of increasing XP, I created this project that 
 
 <hr>
 <h2><img src="to_readme\config_emoji.png" width="22" height="22" align="center" ></img> Funções/Functions</h2>
-<br>
+
 Assista o vídeo a seguir/ Watch this video 
 
-#
+
 [<img src="https://img.youtube.com/vi/GzTMQxRmNKg/hqdefault.jpg" width="400" height="300"
 />](https://youtu.be/GzTMQxRmNKg)
 
 #
 
 <h3>Requisitos Mínimos/ Minimum requirements</h3>
-
-<br>
 
 <strong>CPU</strong>: 1Ghz <br>
  <strong>RAM</strong>: 1.5Gb<br>
