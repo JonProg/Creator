@@ -45,5 +45,5 @@ Assista o vídeo a seguir/ Watch this video
 <h3>Requisitos Mínimos/ Minimum requirements</h3>
 
 <strong>CPU</strong>: 1Ghz <br>
- <strong>RAM</strong>: 1.5Gb<br>
- <strong>SIZE</strong>: ~200Mb
+<strong>RAM</strong>: 1.5Gb<br>
+<strong>SIZE</strong>: ~200Mb
