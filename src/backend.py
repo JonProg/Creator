@@ -11,8 +11,8 @@ def criar_prova(questions:dict, path_folder, qtd_question:int, randoms=False):
 
         pdf = FPDF(format="A4")
         pdf.add_page()
-        pdf.add_font('Arial','','fonts\ARIAL.ttf',uni=True)
-        pdf.add_font('Arial','B','fonts\ARIALBD.ttf',uni=True)
+        pdf.add_font('Arial','',r'..\fonts\Arial.ttf',uni=True)
+        pdf.add_font('Arial','B',r'..\fonts\ArialBD.ttf',uni=True)
 
         pdf.set_font('Arial', 'B', 12)
 
