@@ -8,7 +8,7 @@
 
 <h2><img src="to_readme\emoji_rocket.png" width="22" height="22" align="center"></img> Aplicação/Application</h2>
 
-[![image-readme.png](https://i.postimg.cc/bNYkKTP1/image-readme.png)](https://postimg.cc/JtgsXjGh)
+[![image-readme.png](https://i.postimg.cc/jdsC1Ybz/image-readme.png)](https://postimg.cc/G95cBN92)
 
 [<img src="to_readme/kindpng_4986476.png" width="170"/>](https://www.mediafire.com/file/s9wl4nnrzohuxi2/creator1.0_setup.exe/file)
 </main>
